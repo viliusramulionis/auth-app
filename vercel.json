@@ -9,12 +9,20 @@
                     "dist/**"
                 ]
             }
+        },
+        {
+            "src": "./src/view/assets/**",
+            "use": "@vercel/static"
         }
     ],
     "routes": [
         {
             "src": "/(.*)",
             "dest": "src/index.js"
+        },
+        {
+            "src": "/assets/(.+)",
+            "dest": "src/view/assets/$1"
         }
     ]
 }

@@ -30,7 +30,7 @@ app.use(express.json());
 app.use('/api', users);
 
 // Assets direktorijos priėjimo nustatymas
-app.use('/assets', (req, res) => {
+app.get('/assets', (req, res) => {
   res.send('Labas');
 });
 

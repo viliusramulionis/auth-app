@@ -1,28 +1,16 @@
 {
     "version": 2,
     "builds": [
-        {
-            "src": "./src/index.js",
-            "use": "@vercel/node",
-            "config": {
-                "includeFiles": [
-                    "dist/**"
-                ]
-            }
-        },
-        {
-            "src": "./src/view/assets/**",
-            "use": "@vercel/static"
-        }
+     {
+      "src": "./src/index.js",
+      "use": "@vercel/node",
+      "config": { "includeFiles": ["dist/**"] }
+     }
     ],
     "routes": [
-        {
-            "src": "/((?!.*\\.\\w+$).*)",
-            "dest": "/src/index.js"
-          },
-          {
-            "src": "/assets/(.+\\.[a-z]+)$",
-            "dest": "./src/view/assets/$1"
-          }
+     {
+      "src": "/(.*)",
+      "dest": "src/index.js"
+     }
     ]
 }

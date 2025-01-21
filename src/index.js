@@ -30,9 +30,7 @@ app.use(express.json());
 app.use('/api', users);
 
 // Assets direktorijos priėjimo nustatymas
-app.get('/assets', (req, res) => {
-  res.send('Labas');
-});
+app.use('/assets', express.static('./src/view/assets'));
 
 // Visu elementu priejimas is views direktorijos
 // app.use(express.static('./src/view'));

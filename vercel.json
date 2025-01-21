@@ -17,12 +17,12 @@
     ],
     "routes": [
         {
-            "src": "/(.*)",
-            "dest": "src/index.js"
-        },
-        {
-            "src": "/assets/(.+)",
-            "dest": "src/view/assets/$1"
-        }
+            "src": "/((?!.*\\.\\w+$).*)",
+            "dest": "/src/index.js"
+          },
+          {
+            "src": "/assets/(.+\\.[a-z]+)$",
+            "dest": "./src/view/assets/$1"
+          }
     ]
 }
